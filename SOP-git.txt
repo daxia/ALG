@@ -1,0 +1,23 @@
+1. 在电脑上安装git
+
+2. 安装完成后，使用git的cmd终端敲击如下命令：
+  
+创建一个全球用户名、全球邮箱，设置全局配置 
+git config –global user.name “用户名” 
+git config –global user.email “对应邮箱” 
+
+3.
+cd d:/wamp/www/wap              //首先指定到你的项目目录下
+git init
+touch README.md
+git add README.md
+git commit -m "first commit"
+//需要现在github中建立ALG仓库，然后执行下面的命令行
+git remote add origin https://github.com/daxia/ALG.git  
+//用你仓库的url,ALG.git中ALG为仓库名称,使用时必须先创建
+git push -u origin master  //提交到你的仓库
+
+4.注意建立过程中遇到的问题
+  1)如果执行【git push -u origin master】遇到错误fatal: remote origin already exists. 
+      ========>先执行命令清除origin ： git remote rm origin
+      ========>然后在执行【git push -u origin master】
